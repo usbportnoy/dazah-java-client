@@ -1,7 +1,8 @@
 package com.dazah.api.client.controllers;
 
 
-import com.dazah.api.client.models.autocomplete.Response;
+import com.dazah.api.client.models.ListResponse;
+import com.dazah.api.client.models.autocomplete.CategoryResult;
 
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
@@ -16,7 +17,7 @@ public interface Autocomplete {
     @GET
     @Path("search")
     @Produces("application/x-www-form-urlencoded")
-    Response search(
+    ListResponse<CategoryResult> search(
             @QueryParam("access_token") String accessToken,
             @QueryParam("query") String query
     );

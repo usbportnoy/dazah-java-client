@@ -6,7 +6,7 @@ import org.codehaus.jackson.annotate.JsonProperty;
 /**
  * Created by usbportnoy on 12/13/15.
  */
-public class Response extends com.dazah.api.client.models.Response {
+public class Search {
     private float relevanceScore;
     private Message message;
 

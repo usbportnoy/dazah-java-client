@@ -1,17 +1,20 @@
 package com.dazah.api.client.models;
 
+import com.dazah.api.client.models.autocomplete.CategoryResult;
 import org.codehaus.jackson.annotate.JsonIgnoreProperties;
 import org.codehaus.jackson.annotate.JsonProperty;
+
+import java.util.List;
 
 /**
  * Created by usbportnoy on 12/9/15.
  */
 @JsonIgnoreProperties
-public class Response {
-    protected Float executionTime;
-    protected Boolean success;
-    protected String error;
-    protected Pagination pagination;
+public abstract class Response {
+    private Float executionTime;
+    private Boolean success;
+    private String error;
+    private Pagination pagination;
 
     @JsonProperty("execution_time")
     public Float getExecutionTime() {
