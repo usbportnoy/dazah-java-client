@@ -13,7 +13,6 @@ public class Conversation extends AbstractEntity {
     private URL url;
     private int newMessageCount;
     private Usage usage;
-    private User user;
     private boolean archived;
     private User userA;
     private User userB;
@@ -52,14 +51,6 @@ public class Conversation extends AbstractEntity {
 
     public void setUsage(Usage usage) {
         this.usage = usage;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
     }
 
     @JsonProperty("user_a")
