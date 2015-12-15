@@ -11,14 +11,6 @@ import javax.ws.rs.*;
 public interface Conversations {
 
     @GET
-    @Path("~")
-    Response me(
-            @QueryParam("access_token") String accessToken,
-            @QueryParam("order_by") String orderBy,
-            @QueryParam("offset") int offset
-    );
-
-    @GET
     @Path("{ids}")
     Response get(
             @PathParam("ids") String ids,
